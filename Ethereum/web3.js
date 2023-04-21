@@ -8,7 +8,7 @@ if (typeof window !== "undefined" && typeof window.web3 !== "undefined") {
   console.log("Web3: ", web3);
 } else {
   const provider = new Web3.providers.HttpProvider(
-    "https://sepolia.infura.io/v3/6c171c493c214988aa8155ebfddd6fe4"
+    "https://sepolia.infura.io/v3/6171c493c214988aa8155ebfddd6f4"
   );
   web3 = new Web3(provider);
   console.log("Web3 else: ", web3);
