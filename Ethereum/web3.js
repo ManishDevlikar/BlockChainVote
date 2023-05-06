@@ -9,7 +9,7 @@ if (typeof window !== "undefined" && typeof window.ethereum !== "undefined") {
   console.log("Web3: ", web3);
 } else {
   const provider = new Web3.providers.HttpProvider(
-    "https://sepolia.infura.io/v3/6c171c493c214988aa8155ebfddd6fe4"
+    "https://sepolia.infura.io/v3/Your Api key"
   );
   web3 = new Web3(provider);
   console.log("Web3 else: ", web3);
