@@ -19,6 +19,7 @@ import Cookies from "js-cookie";
 import { Link, Router } from "../../routes";
 import Election from "../../Ethereum/election";
 import ipfs from "../../ipfs";
+
 import { Helmet } from "react-helmet";
 class VotingList extends Component {
   state = {
@@ -42,7 +43,7 @@ class VotingList extends Component {
         election_name: summary[0],
         election_description: summary[1],
       });
-      const c = await election.methods.getNumOfCandidates.call();
+      const c = await election.methods.getNumOfCandidates().call();
       if (c == 0) alert("Register a candidate first!");
 
       let candidates = [];
@@ -59,7 +60,7 @@ class VotingList extends Component {
           image: (
             <Image
               id={i}
-              src={`https://ipfs.io/ipfs/${candidate[2]}`}
+              src={`https://blockchain-app.infura-ipfs.io/ipfs/${candidate[2]}`}
               style={{ maxWidth: "100%", maxHeight: "190px" }}
             />
           ),
@@ -118,6 +119,7 @@ class VotingList extends Component {
     event.preventDefault();
     this.setState({ loading: true });
     const accounts = await web3.eth.getAccounts();
+    console.log(accounts[0]);
 
     try {
       await ipfs.add(this.state.buffer, (err, ipfsHash) => {
@@ -125,7 +127,7 @@ class VotingList extends Component {
 
         const add = Cookies.get("address");
         const election = Election(add);
-
+        // console.log(ipfsHash);
         election.methods
           .addCandidate(
             this.state.cand_name,
@@ -144,6 +146,7 @@ class VotingList extends Component {
     } catch (err) {
       alert("Error in file processing.");
     }
+
     //ajax script below
     const email = document.getElementById("email").value;
     var http = new XMLHttpRequest();

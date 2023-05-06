@@ -3,10 +3,12 @@
   "version": "1.0.0",
   "main": "server.js",
   "dependencies": {
+    "@pinata/sdk": "github:PinataCloud/pinata-sdk",
     "@truffle/hdwallet-provider": "^2.1.9",
     "@zeit/next-css": "^1.0.1",
     "bcrypt": "^5.1.0",
     "body-parser": "^1.18.3",
+    "buffer": "^6.0.3",
     "chart.js": "^2.8.0",
     "chartjs": "^0.3.24",
     "chartjs-plugin-annotation": "^0.5.7",
@@ -15,7 +17,7 @@
     "fs-extra": "^7.0.1",
     "ganache-cli": "^6.4.1",
     "ipfs-api": "^26.1.2",
-    "ipfs-http-client": "^60.0.0",
+    "ipfs-http-client": "^56.0.3",
     "js-cookie": "^2.2.0",
     "mongoose": "^5.5.1",
     "next": "^8.0.3",
@@ -31,7 +33,7 @@
     "smtp-connection": "^4.0.2",
     "solc": "^0.4.25",
     "truffle-hdwallet-provider": "^1.0.5",
-    "web3": "^1.0.0-beta.52"
+    "web3": "^1.9.0"
   },
   "devDependencies": {
     "mocha": "^6.1.4"
