@@ -13,6 +13,6 @@ authors:
 cff-version: "1.1.0"
 date-released: 2023-04-01
 message: "If you use this software, please cite it using these metadata."
-repository-code: "https://github.com/mehtaAnsh/BlockChainVoting"
+repository-code: "https://github.com/ManishDevlikar/BlockChainVote"
 title: BlockChainVoting
 version: "v1.0"
