@@ -45,7 +45,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "A blockchain-based E-voting system, created for the final year project of my college, with the help of my Project partners, Sayyam Gada and Charmee Mehta.",
+  "description": "A blockchain-based E-voting system, created for the final year project of my college, with the help of my Project partners.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mehtaAnsh/BlockChainVoting-Private.git"
